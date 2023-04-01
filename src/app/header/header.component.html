@@ -1,1 +1,28 @@
-<p>header works!</p>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" (click)="collapsed = !collapsed">
+                <span class="icon-bar" *ngFor="let iconBar of [1,2,3]">
+                </span>
+            </button>
+            <a href="#" class="navbar-brand">Recipe Book</a>
+        </div>
+
+        <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true"></div>
+
+        <div class="collapse navbar-collapse"></div>
+        <ul class="nav navbar-nav">
+            <li href="#"><a>Recipes</a></li>
+            <li href="#"><a>Shopping List</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" role="button">Manage <span class="icon icon--md icon--caret-down"></span></a>
+                <ul class="dropdown-menu">
+                    <li href="#"><a>Saving Data</a></li>
+                    <li href="#"><a>Fetching Data</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
